@@ -1,4 +1,3 @@
-# portfolio
 # 🌐 Arya Kulkarni — Portfolio Website
 
 Hey there! 👋  

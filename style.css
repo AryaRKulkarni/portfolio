@@ -1,0 +1,509 @@
+/* ------------------ Base Styles ------------------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #000;
+  color: #fff;
+  scroll-behavior: smooth;
+  cursor: url('image/cursor.png'), auto;
+}
+
+/* ------------------ Splash Screen ------------------ */
+.splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: fadeOut 2s ease 1s forwards;
+}
+
+.splash-screen h1 {
+  font-size: 12vw;
+  color: white;
+  font-weight: 900;
+  text-align: center;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  animation: zoomIn 2s ease-in-out;
+  max-width: 90%;
+  word-break: break-word;
+
+}
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeOut {
+  0%, 80% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* ------------------ Top Contact Bar ------------------ */
+.top-contact {
+  position: fixed;
+  top: 25px;
+  right: 30px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 1rem;
+  color: white;
+  z-index: 9999;
+  background-color: #000;
+  padding: 5px 10px;
+  border-radius: 8px;
+}
+
+.top-contact .email-text {
+  font-weight: 500;
+  user-select: text;
+}
+
+.top-contact a i {
+  font-size: 1.3rem;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.top-contact a i:hover {
+  color: #00ffff;
+}
+
+/* ------------------ Sections ------------------ */
+section {
+  padding: 80px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 1s ease, visibility 1s ease;
+}
+
+.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* ------------------ Hero Section ------------------ */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 10vw;
+  text-align: center;
+  background-color: #000;
+}
+
+.hero-content {
+  width: 100%;
+  padding-top: 120px;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  user-select: none;
+}
+
+.intro-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #e0e0e0;
+}
+
+.hire-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background-color: #fff;
+  color: #000;
+  text-decoration: none;
+  border: 2px solid #fff;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  cursor: url('image/cursor.png'), auto;
+}
+
+.hire-button:hover {
+  background-color: transparent;
+  color: #fff;
+  border-color: #fff;
+}
+
+/* Custom cursor for all interactive elements */
+a, button, .hire-button {
+  cursor: url('image/cursor.png'), auto;
+}
+
+/* ------------------ Scroll Down Animation ------------------ */
+.scroll-container {
+  margin-top: 70px;
+  text-align: center;
+}
+
+.scroll-down {
+  font-size: 1.5rem;
+  color: #fff;
+  animation: bounce 2s infinite;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.scroll-down:hover {
+  color: #00ffff;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+/* ------------------ About Section ------------------ */
+.about h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #ccc;
+}
+
+/* ------------------ Skills Section ------------------ */
+.skills {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.skills h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  justify-items: center;
+  align-items: center;
+}
+
+.skills-grid img {
+  width: 60px;
+  height: 60px;
+  transition: transform 0.3s ease;
+}
+
+.skills-grid img:hover {
+  transform: scale(1.15);
+}
+
+.skills-grid div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skills-grid p {
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* ------------------ Education Section ------------------ */
+.education {
+  text-align: center;
+  background-color: #000;
+  padding: 80px 20px;
+}
+
+.education h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.education-item h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.education-item p {
+  font-size: 1rem;
+  color: #ccc;
+  margin: 5px 0;
+}
+
+/* ------------------ Experience Section ------------------ */
+.experience {
+  background-color: #000;
+  color: #fff;
+  padding: 80px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.experience h2 {
+  font-size: 2.5rem;
+  margin-bottom: 60px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.timeline::before,
+.timeline::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background-color: #444;
+}
+
+.timeline::before {
+  left: 10%;
+}
+
+.timeline::after {
+  right: 10%;
+}
+
+.timeline-item {
+  background-color: #111;
+  padding: 30px;
+  border-radius: 10px;
+  margin: 0 auto 60px auto;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.08);
+}
+
+.timeline-item h3,
+.timeline-item h4 {
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.timeline-item .location {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 5px;
+}
+
+.timeline-item span {
+  font-size: 0.95rem;
+  color: #aaa;
+}
+
+/* ------------------ Projects Section ------------------ */
+.projects {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: #000;
+}
+
+.projects h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.project {
+  margin-bottom: 40px;
+  padding: 0 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.project h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.project p {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 5px;
+}
+
+.project span {
+  font-size: 0.9rem;
+  color: #aaa;
+  font-style: italic;
+}
+
+/* ------------------ Contact Section ------------------ */
+.contact {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.contact p {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-bottom: 30px;
+}
+
+.contact-links a {
+  display: inline-block;
+  margin: 10px 20px;
+  color: #fff;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-links a i {
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.contact-links a:hover {
+  color: #00ffff;
+}
+
+/* ------------------ Footer ------------------ */
+.footer {
+  border-top: 1px solid #444;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  background-color: #000;
+  font-size: 0.95rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+@media (max-width: 600px) {
+  .footer {
+    font-size: 0.85rem;
+    padding: 15px 10px;
+  }
+}
+
+/* ------------------ Responsive (Tablets and Down) ------------------ */
+@media (max-width: 768px) {
+  h1, h2 {
+    font-size: 1.8rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .timeline::before,
+  .timeline::after {
+    display: none;
+  }
+
+  .timeline-item {
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  .project {
+    padding: 10px;
+  }
+
+  .skills-grid img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .contact-links a {
+    display: block;
+    margin: 10px auto;
+  }
+}
+
+/* ------------------ Responsive (Mobiles and Small Devices) ------------------ */
+@media (max-width: 480px) {
+  .splash-screen h1 {
+    font-size: 10vw;
+    letter-spacing: 4px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .hero h1, .about h2, .skills h2, .education h2, .experience h2, .projects h2, .contact h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero p, .about p, .project p {
+    font-size: 0.9rem;
+  }
+}
