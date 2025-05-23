@@ -196,6 +196,23 @@ a, button, .hire-button {
   }
 }
 
+.intro-text {
+  max-width: 90%;
+  margin: auto;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #ccc;
+  text-align: center;
+  padding: 0 1rem;
+  word-break: break-word;
+}
+
+@media (min-width: 768px) {
+  .intro-text {
+    font-size: 1.2rem;
+  }
+}
+
 /* ------------------ About Section ------------------ */
 .about h2 {
   font-size: 2.5rem;
@@ -432,6 +449,37 @@ a, button, .hire-button {
 
 .contact-links a:hover {
   color: #00ffff;
+}
+
+@media (max-width: 600px) {
+  .contact {
+    padding: 40px 15px;
+  }
+
+  .contact h2 {
+    font-size: 2rem;
+  }
+
+  .contact p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    text-align: center;     
+    display: flex;           
+    align-items: center;     
+    justify-content: center; 
+    gap: 8px;               
+  }
+
+  .contact-links a {
+    display: block;
+    margin: 12px 0;
+    font-size: 1.1rem;
+  }
+
+  .contact-links a i {
+    font-size: 1.4rem;
+    margin-right: 8px;
+  }
 }
 
 /* ------------------ Footer ------------------ */
